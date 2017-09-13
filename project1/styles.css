@@ -1,0 +1,19 @@
+#name{
+    color: purple;
+}
+
+ul{
+    list-style: none;
+}
+
+li a{
+    color: red;
+}
+
+.imgStyle{
+     border: 5px !important;
+     padding: 5px;
+}
+.borderS{
+    border: 5px purple;
+}
