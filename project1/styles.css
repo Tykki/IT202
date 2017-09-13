@@ -11,9 +11,6 @@ li a{
 }
 
 .imgStyle{
-     border: 5px !important;
+     border: 5px purple !important;
      padding: 5px;
-}
-.borderS{
-    border: 5px purple;
 }
