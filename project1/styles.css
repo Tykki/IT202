@@ -6,6 +6,10 @@ ul{
     list-style: none;
 }
 
+li {
+    text-align: center;
+}
+
 li a{
     color: red;
 }
@@ -13,4 +17,5 @@ li a{
 .imgStyle{
      border: 5px purple !important;
      padding: 5px;
+     margin: auto;
 }
