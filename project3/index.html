@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>Random Data App</title>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css">
+
+<style type="text/css">
+	body {
+  padding-top: 3.5rem;
+}
+
+	#template{
+		display: none;
+	}
+</style>
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Project 3</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a id="link1" class="nav-link" href="#">List View</a>
+          </li>
+          <li class="nav-item">
+            <a id="link2" class="nav-link" href="#">Map View</a>
+          </li>
+        </ul>
+        <form id="Home" class="form-inline">
+          <button class="btn btn-outline-success" onclick="Home();" type="button">Search Again?</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="viewSearch" class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">What Does A Savage Need?</h1>
+        <form action="javascript:search();">
+        	<div class="form-group">
+        		<label for="Date">Inspection Date</label>
+        		<input type="date" name="inspDate" class="form-control">
+        	</div>
+        	<div class="form-group">
+        		<label for="Type">Facility Type</label>
+        		<input type="text" name="facType" class="form-control">
+        	</div>
+        	<div class="form-group">
+        		<label for="Status">Status</label>
+        		<section class="input-group">
+        			<input type="text" name="inspStatus" class="form-control">
+        			<div class="input-group-btn">
+        				<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+        			aria-haspopup="true" aria-expanded="false"></button>
+        				<section class="dropdown-menu dropdown-menu-right">
+					        <a class="dropdown-item" href="#">Pass</a>
+					        <a class="dropdown-item" href="#">Not Ready</a>
+					        <a class="dropdown-item" href="#">Fail</a>
+					        <div role="separator" class="dropdown-divider"></div>
+					        	<a class="dropdown-item" href="#">Out of Business</a>
+				        </section>
+        			</div>
+        		</section>
+        		
+        	</div>
+        	<div class="form-group">
+        		<label for="Zip">Zip Code</label>
+        		<input type="text" name="inspZip" class="form-control">
+        	</div>
+        	<button type="submit" class="btn btn-primary btn-lg">Search <span class="octicon octicon-search"></span></button>
+        </form>
+      </div>
+    </div>
+
+    <div id="viewList" class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2017</p>
+      </footer>
+    </div> <!-- /container -->
+
+    <div id="viewMap" class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© Company 2017</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+<script type="text/javascript">
+	$.ajax({
+    url: "https://data.cityofchicago.org/resource/cwig-ma7x.json",
+    type: "GET",
+    data: {
+      "$limit" : 5000,
+    }
+}).done(function(data) {
+
+  console.log(data);
+});
+
+	$("#viewMap").hide();
+	$("#viewList").hide();
+	$("#Home").hide();
+	$("#link1").addClass("disabled");
+	$("#link2").addClass("disabled");
+
+</script>
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		(search = function(){
+			$("#viewSearch").hide();
+			$("#viewList").show();
+			$("#Home").show();
+			$("#link1").removeClass("disabled");
+			$("#link2").removeClass("disabled");
+		});
+
+		(Home = function(){
+			$("#viewSearch").show();
+			$("#viewMap").hide();
+			$("#viewList").hide();
+			$("#Home").hide();
+			$("#link1").addClass("disabled");
+			$("#link2").addClass("disabled");
+		});
+	});
+
+		
+</script>
+
+<!-- $.get("https://data.cityofchicago.org/resource/cdmx-wzbz.json?$limit=100", function(data){
+			console.log(data);
+			$.each(data, function(i,v){
+				console.log(i, v);
+				$("#template").clone().appendTo("#results");
+
+				$("#results").append("<h1>Service Request Number: " + v.service_request_number + "<h1>");
+				$("#results").append("<b>Street Address: " + v.street_address + "</b><br>");
+				$("#results").append("<i>Status: " + v.status + "</i>");
+			});
+		});
+	}); -->
+  
+
+</body>
+</html>
