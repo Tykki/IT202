@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+                <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+        
+    </head>
+    <body>
+        <canvas id="canvas" width="100%" height="100%">
+            
+        </canvas>
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript">
+        
+        $("#canvas").on("click", function(evt){
+                console.log(evt);
+                drawCircle(evt.clientX, evt.ClientY)
+            });
+            
+            function drawCircle(x, y){
+                var c = document.getElementById("canvas");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(x,y,40,0,2*Math.PI);
+                ctx.stroke();
+            }
+            
+            
+            
+            
+            drawCircle(0,0);
+            
+        </script>
+        
+    </body>
+</html>
