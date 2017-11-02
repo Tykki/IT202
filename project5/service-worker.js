@@ -11,7 +11,7 @@ var filesToCache = [
   '/IT202/project5/images/cloudy.png',
   '/IT202/project5/images/fog.png',
   '/IT202/project5/images/ic_add_white_24px.svg',
-  '//IT202/project5images/ic_refresh_white_24px.svg',
+  '/IT202/project5images/ic_refresh_white_24px.svg',
   '/IT202/project5/images/partly-cloudy.png',
   '/IT202/project5/images/rain.png',
   '/IT202/project5/images/scattered-showers.png',
