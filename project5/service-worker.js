@@ -2,23 +2,23 @@ var cacheName = 'weatherPWA-Supreme';
 var dataCacheName = 'weatherData-Supreme';
 
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/scripts/app.js',
-  '/styles/inline.css',
-  '/images/clear.png',
-  '/images/cloudy-scattered-showers.png',
-  '/images/cloudy.png',
-  '/images/fog.png',
-  '/images/ic_add_white_24px.svg',
-  '/images/ic_refresh_white_24px.svg',
-  '/images/partly-cloudy.png',
-  '/images/rain.png',
-  '/images/scattered-showers.png',
-  '/images/sleet.png',
-  '/images/snow.png',
-  '/images/thunderstorm.png',
-  '/images/wind.png'
+  '/IT202/project5/',
+  '/IT202/project5/index.html',
+  '/IT202/project5/scripts/app.js',
+  '/IT202/project5/styles/inline.css',
+  '/IT202/project5/images/clear.png',
+  '/IT202/project5/images/cloudy-scattered-showers.png',
+  '/IT202/project5/images/cloudy.png',
+  '/IT202/project5/images/fog.png',
+  '/IT202/project5/images/ic_add_white_24px.svg',
+  '//IT202/project5images/ic_refresh_white_24px.svg',
+  '/IT202/project5/images/partly-cloudy.png',
+  '/IT202/project5/images/rain.png',
+  '/IT202/project5/images/scattered-showers.png',
+  '/IT202/project5/images/sleet.png',
+  '/IT202/project5/images/snow.png',
+  '/IT202/project5/images/thunderstorm.png',
+  '/IT202/project5/images/wind.png'
 ];
 
 self.addEventListener('install', function(e) {
